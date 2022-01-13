@@ -1,3 +1,4 @@
+![Screenshot 2022-01-13 104549](https://user-images.githubusercontent.com/70437135/149270035-73cbc787-e713-454a-b92b-0383fc7596ab.png)
 # Credit_Card_Input_Activity
 Created an Android "screen" that would allow a user to enter and submit the following data from an American Express, Discover, MasterCard, or Visa credit card: 
 --> Credit card number 
