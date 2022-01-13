@@ -39,4 +39,5 @@ dependencies {
     implementation 'com.craftman.cardform:cardform:0.0.2'
     implementation 'com.braintreepayments:card-form:5.3.0'
     implementation 'com.github.fevziomurtekin:PayView:1.0.3'
+    implementation 'com.example.creditcardlibrary:cardview:0.0.15'
 }

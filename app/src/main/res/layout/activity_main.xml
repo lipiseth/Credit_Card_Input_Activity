@@ -4,25 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
-    <com.braintreepayments.cardform.view.CardForm
-        android:id="@+id/card_form"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnBuy"
-        android:layout_width="match_parent"
+    <com.example.creditcardlibrary.view.CustomCreditCard
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorAccent"
-        android:text="Submit"
-        android:textColor="@android:color/white" />
+        android:layout_marginBottom="482dp"
+        app:cardType="MASTER_CARD"
+        app:month="JUNE"
+        app:scrBackground="@drawable/cbimage"
+        app:year="2022" />
+    CustomCreditCard(this)
+
+
+    card.addWatchers(number = cardNumber, cvv = cvv)
+    card.setYear(2021)
+    card.setCreditNumber("1234 1234 1234 3457")
+    card.setMonth(MONTH.JANUARY)
+    card.setSrc(R.drawable.visa_gradient)
+
+    or like this
+    card.setCreditNumber("2121")
+    .setYear(2039)
+    .setType(TYPE.VISA)
+    .setSrc(R.drawable.cbimage)
+    .setMonth(MONTH.JUNE)
+
+    or like this
+    card.apply {
+    setYear(2039)
+    setMonth(MONTH.JANUARY)
+    setCreditNumber("1234 1234 1234 1234")
+    }
+
+
+    card.addWatchers(number = cardNumber, cvv = cvv)
+    or
+    card.addWatchers(number = cardNumber)
+    or
+    card.addWatchers(cvv = cvv)
 
 
 </ RelativeLayout>
